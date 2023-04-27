@@ -13,7 +13,7 @@ Clone this Module with the recurse command:
 
 ## Depends On
 
-| Library                                                                                   | Purpose                                                                     |
-|-------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------|
-| [LeapMotionSDK](https://developer-archive.leapmotion.com/documentation/v2/cpp/index.html) | Establish connection to the Leap Motion Device and collect the data from it |
-| [oscpp](https://github.com/kaoskorobase/oscpp)                                            | Send the Leap Motion Data over the network encoded in the tuoi protocol!    |
+| Library                                                                                          | Purpose                                                                     |
+|--------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------|
+| [LeapMotionSDK/V2.3.1](https://developer-archive.leapmotion.com/documentation/v2/cpp/index.html) | Establish connection to the Leap Motion Device and collect the data from it |
+| [oscpp](https://github.com/kaoskorobase/oscpp)                                                   | Send the Leap Motion Data over the network encoded in the TUOI-Protocol!    |
