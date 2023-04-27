@@ -2,3 +2,8 @@
 	path = libs/external/oscpp/source
 	url = https://github.com/kaoskorobase/oscpp.git
 	branch = master
+
+[submodule "cxxopts"]
+	path = libs/external/cxxopts/source
+	url = https://github.com/jarro2783/cxxopts.git
+	branch = master
