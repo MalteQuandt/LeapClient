@@ -6,7 +6,10 @@ set(CMAKE_CXX_STANDARD 11)
 add_subdirectory(libs)
 
 # generate the executable
-add_executable(CTAG_Project_SS23 main.cpp)
+add_executable(CTAG_Project_SS23)
+target_sources(CTAG_Project_SS23
+        PUBLIC
+            main.cpp)
 target_include_directories(CTAG_Project_SS23
         PUBLIC
             "${CMAKE_CURRENT_SOURCE_DIR}/include")
