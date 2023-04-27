@@ -1,0 +1,4 @@
+[submodule "oscpp"]
+	path = libs/external/oscpp/source
+	url = https://github.com/kaoskorobase/oscpp.git
+	branch = master
