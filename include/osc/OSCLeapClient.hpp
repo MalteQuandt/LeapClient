@@ -2,7 +2,7 @@
 
 #include <chrono>
 
-#include <osc/OSCLeapClient.h>
+#include <osc/OSCLeapClient.hpp>
 #include <util/command_line_options.hpp>
 #include <oscpp/client.hpp>
 

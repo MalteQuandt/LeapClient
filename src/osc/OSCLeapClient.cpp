@@ -1,6 +1,6 @@
 #include <oscpp/client.hpp>
 
-#include <osc/OSCLeapClient.h>
+#include <osc/OSCLeapClient.hpp>
 
 using namespace ctag;
 using namespace ctag::osc;
