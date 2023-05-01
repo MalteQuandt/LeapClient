@@ -28,7 +28,7 @@ namespace ctag::leap {
         /**
          * @brief Close the connection to the leap motion controller
          */
-        ~LeapConnector();
+        ~LeapConnector() override;
     private:
 
         /**

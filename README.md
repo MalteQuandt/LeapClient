@@ -18,7 +18,7 @@ Clone this Module with the recurse command:
 | [LeapMotionSDK/V2.3.1](https://developer-archive.leapmotion.com/documentation/v2/cpp/index.html) | Establish connection to the Leap Motion Device and collect the data from it |
 | [oscpp](https://github.com/kaoskorobase/oscpp)                                                   | Send the Leap Motion Data over the network encoded in the TUOI-Protocol!    |
 | [cxxopts](https://github.com/jarro2783/cxxopts)                                                  | Parse console arguments/options                                             |
-| Boost                                                                                            | For simple UDP communication                                                |
+| [Boost](https://www.boost.org/)                                                                                        | For simple UDP communication                                                |
 
 ## Protocol
 
@@ -27,15 +27,16 @@ It is a superset of the [TUOI](https://www.tuio.org/?specification), and support
 
 1. **Connection Specific**:
 
-| Command                | Meaning                                                                   | Example                 |
-|------------------------|---------------------------------------------------------------------------|-------------------------|
-| server/connect/        | Connect client to server                                                  | "server/connect/"       |
-| server/disconnect/     | Disconnect Client from Server                                             | "server/disconnect/"    |
-| leapgodot/connected    | The Leap Controller has been detected and connection has been initialized | "leapgodot/connected"   |
-| leapgodot/disconnected | The Leap Controller has been disconnected                                 | "leapgodot/disconnected | 
+| Command                  | Meaning                                                                   | Example                 |
+|--------------------------|---------------------------------------------------------------------------|-------------------------|
+| /server/connect          | Connect client to server                                                  | "server/connect/"       |
+| /server/disconnect       | Disconnect Client from Server                                             | "server/disconnect/"    |
+| /godot/leap/connected    | The Leap Controller has been detected and connection has been initialized | "leapgodot/connected"   |
+| /godot/leap/disconnected | The Leap Controller has been disconnected!                               | "leapgodot/disconnected | 
  
 2. **Leap Data Specific**
 
-| Command | Meaning | Example |
-|---------|---------|---------|
-|         |         |         |
+| Command                       | Meaning                                                 | Arguments                                        |
+|-------------------------------|---------------------------------------------------------|--------------------------------------------------|
+| /godot/hand/<ID>/palmPos | Send the Position data of the Palm                      | Array of \["x", x_val, "y", y_val, "z", z_val\]  |
+| /godot/hand/<ID>/palmOrientation | Send the Orientation data of the Palm, the Palm Normal! | Array of \["x", x_val, "y", y_val, "z", z_val\]  |
