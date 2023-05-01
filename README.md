@@ -17,3 +17,25 @@ Clone this Module with the recurse command:
 |--------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------|
 | [LeapMotionSDK/V2.3.1](https://developer-archive.leapmotion.com/documentation/v2/cpp/index.html) | Establish connection to the Leap Motion Device and collect the data from it |
 | [oscpp](https://github.com/kaoskorobase/oscpp)                                                   | Send the Leap Motion Data over the network encoded in the TUOI-Protocol!    |
+| [cxxopts](https://github.com/jarro2783/cxxopts)                                                  | Parse console arguments/options                                             |
+| Boost                                                                                            | For simple UDP communication                                                |
+
+## Protocol
+
+In order to facilitate the communication with the game, a protocol was designed to send important messages. 
+It is a superset of the [TUOI](https://www.tuio.org/?specification), and supports the following commands:
+
+1. **Connection Specific**:
+
+| Command                | Meaning                                                                   | Example                 |
+|------------------------|---------------------------------------------------------------------------|-------------------------|
+| server/connect/        | Connect client to server                                                  | "server/connect/"       |
+| server/disconnect/     | Disconnect Client from Server                                             | "server/disconnect/"    |
+| leapgodot/connected    | The Leap Controller has been detected and connection has been initialized | "leapgodot/connected"   |
+| leapgodot/disconnected | The Leap Controller has been disconnected                                 | "leapgodot/disconnected | 
+ 
+2. **Leap Data Specific**
+
+| Command | Meaning | Example |
+|---------|---------|---------|
+|         |         |         |
