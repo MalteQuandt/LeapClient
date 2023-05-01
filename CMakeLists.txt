@@ -27,10 +27,14 @@ target_include_directories(CTAG_Project_SS23
 
 target_sources(CTAG_Project_SS23
         PUBLIC
-            # utils
+        # utils
             ${CMAKE_CURRENT_SOURCE_DIR}/src/util/services.cpp
+        # command line options
             ${CMAKE_CURRENT_SOURCE_DIR}/src/util/command_line_options.cpp
+        # osc
             ${CMAKE_CURRENT_SOURCE_DIR}/src/osc/OSCLeapClient.cpp
+        # leap
+            ${CMAKE_CURRENT_SOURCE_DIR}/src/leap/LeapConnector.cpp
         )
 
 target_link_libraries(CTAG_Project_SS23

@@ -30,6 +30,17 @@ namespace ctag::leap {
          */
         ~LeapConnector();
     private:
+
+        /**
+         * @brief Send the Palm orientation and other data to the server
+         */
+        void sendPalm(const Leap::Frame& frame);
+
+        /**
+         * @brief Send the type of the Hand (Left or right!)
+         * @param frame
+         */
+        void sendHandType(const Leap::Frame& frame);
         /**
          * The internal representation of the Leap Motion Controller.
          */
