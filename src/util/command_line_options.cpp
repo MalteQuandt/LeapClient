@@ -16,7 +16,7 @@ CLOptions::CLOptions(int argc, char **argv) {
     // define the console options
     options.add_options()
             ("ip", "The id-address of the osc-server to connect to", cxxopts::value<std::string>()->default_value("127.0.0.1"))
-            ("port", "The port of the osc-server to connect to", cxxopts::value<signed int>()->default_value("9000"))
+            ("port", "The port of the osc-server to connect to", cxxopts::value<int>()->default_value("9000"))
             ("h,help", "Print the help commands");
 
     // parse the options
@@ -28,7 +28,11 @@ CLOptions::CLOptions(int argc, char **argv) {
     }
 
     this->ip = result["ip"].as<std::string>();
-    this->port = result["port"].as<unsigned int>();
+    this->port = result["port"].as<int>();
+}
+
+Address CLOptions::getAddress() const {
+    return {this->getIp(), this->getPort()};
 }
 
 const std::string &CLOptions::getIp() const {
